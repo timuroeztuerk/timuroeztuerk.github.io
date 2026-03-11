@@ -7,6 +7,29 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+<p>Teaching in economic history, quantitative methods, and data science at Universität Bayreuth.</p>
+
+{% assign teaching_items = site.teaching | sort: "sort_order" | reverse %}
+{% for post in teaching_items %}
+  <div class="list__item">
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      <h2 class="archive__item-title" itemprop="headline">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+      </h2>
+
+      {% capture meta %}
+        {% if post.level %}{{ post.level }}{% endif %}
+        {% if post.format %}{% if post.level %}, {% endif %}{{ post.format }}{% endif %}
+        {% if post.terms %}{% if post.level or post.format %}, {% endif %}{{ post.terms }}{% endif %}
+      {% endcapture %}
+      {% assign meta = meta | strip %}
+      {% if meta != "" %}
+        <p>{{ meta }}</p>
+      {% endif %}
+
+      {% if post.excerpt %}
+        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% endif %}
+    </article>
+  </div>
 {% endfor %}

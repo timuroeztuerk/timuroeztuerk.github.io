@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Timur Öztürk / Site Title"
+title                    : "Timur Öztürk"
 title_separator          : "-"
 name                     : &name "Timur Öztürk"
-description              : &description "Timur Öztürk's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Researcher and Ph.D. candidate in economic history at Universität Bayreuth."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://timurozturk.de # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,10 +26,10 @@ author:
   avatar           : "profile.png"
   name             : "Timur Öztürk"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "Researcher and Ph.D. candidate in economic history at Universität Bayreuth."
   location         : "Bayreuth, Germany"
-  employer         : "University of Bayreuth"
-  uri              : # URL
+  employer         : "Universität Bayreuth"
+  uri              : "https://timurozturk.de"
   email            : "timur.oeztuerk@uni-bayreuth.de" 
 
   # Academic websites
@@ -57,7 +57,7 @@ author:
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "timuroeztuerk"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username

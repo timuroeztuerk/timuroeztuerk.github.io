@@ -1,12 +1,14 @@
 ---
 permalink: /
-title: "Welcome to my Website"
+title: "Timur Öztürk"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-Thanks for visiting my website! I am a PhD candidate at the University of Bayreuth under the supervision of [Prof. Dr. Sebastian Braun](https://sebastiantillbraun.com/) at the chair for [https://www.econhist.uni-bayreuth.de/en/index.html](Quantitative Economic History). My [current research](timurozturk.de/research/) focuses on demographic change, industrialization, religion, and political outcomes in Germany between 1846 and 1946. I also have several other projects.
+I am a researcher and Ph.D. candidate in economic history at the [University of Bayreuth](https://www.econhist.uni-bayreuth.de/en/index.html), where I work with [Prof. Dr. Sebastian Braun](https://sebastiantillbraun.com/) on a DFG-funded project on historical political economy in Germany.
 
-=========
+My research focuses on demographic change, industrialization, religion, political behavior, and long-run socioeconomic change in Germany between the mid-nineteenth and mid-twentieth centuries. Methodologically, I combine archival digitization, reproducible data workflows, econometrics, and machine learning to build new historical datasets.
+
+Current work is summarized on the [Research](/research/) page. You can also find recent [Talks](/talks/) and [Teaching](/teaching/) there.

@@ -1,7 +1,9 @@
 ---
 layout: archive
-title: "Publications"
-permalink: /publications/
+title: "Research"
+permalink: /research/
+redirect_from:
+  - /publications/
 author_profile: true
 ---
 
@@ -11,26 +13,39 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
+<p>My research focuses on historical political economy, demographic change, religion, and long-run development in Germany. I work with archival digitization, econometrics, and reproducible computational workflows.</p>
+
+{% assign research_items = site.publications | sort: "sort_order" | reverse %}
+{% for post in research_items %}
+  <div class="list__item">
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      <h2 class="archive__item-title" itemprop="headline">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+      </h2>
+
+      {% capture meta %}
+        {% if post.status %}{{ post.status }}{% endif %}
+        {% if post.venue %}
+          {% if post.status %}, {% endif %}<i>{{ post.venue }}</i>
+        {% endif %}
+        {% if post.coauthors %}, with {{ post.coauthors }}{% endif %}
+      {% endcapture %}
+      {% assign meta = meta | strip %}
+      {% if meta != "" %}
+        <p>{{ meta }}</p>
       {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
 
+      {% if post.excerpt %}
+        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% endif %}
 
-
+      {% if post.paperurl or post.dataurl or post.codeurl %}
+        <p>
+          {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% endif %}
+          {% if post.dataurl %}{% if post.paperurl %} | {% endif %}<a href="{{ post.dataurl }}">Dataset</a>{% endif %}
+          {% if post.codeurl %}{% if post.paperurl or post.dataurl %} | {% endif %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
+        </p>
+      {% endif %}
+    </article>
+  </div>
+{% endfor %}
