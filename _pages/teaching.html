@@ -14,19 +14,27 @@ show_title: false
     <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
       <h2 class="archive__item-title" itemprop="headline">{{ post.title }}</h2>
 
-      {% capture meta %}
-        {% if post.level %}{{ post.level }}{% endif %}
-        {% if post.format %}{% if post.level %}, {% endif %}{{ post.format }}{% endif %}
-        {% if post.terms %}{% if post.level or post.format %}, {% endif %}{{ post.terms }}{% endif %}
-      {% endcapture %}
-      {% assign meta = meta | strip %}
-      {% if meta != "" %}
-        <p>{{ meta }}</p>
+      {% if post.level %}
+        <p class="archive__item-teaching-meta">{{ post.level }}</p>
+      {% endif %}
+
+      {% if post.format %}
+        <p class="archive__item-teaching-meta">{{ post.format }}</p>
+      {% endif %}
+
+      {% if post.terms %}
+        <p class="archive__item-teaching-meta">{{ post.terms }}</p>
       {% endif %}
 
       {% if post.excerpt %}
         <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% endif %}
+
+      <p class="archive__item-resources">
+        {% if post.codeurl %}<a href="{{ post.codeurl }}">Code</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Code</span>{% endif %} |
+        {% if post.repositoryurl %}<a href="{{ post.repositoryurl }}">Repository</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Repository</span>{% endif %} |
+        {% if post.slidesurl %}<a href="{{ post.slidesurl }}">Slides</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Slides</span>{% endif %}
+      </p>
     </article>
   </div>
 {% endfor %}

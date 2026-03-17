@@ -1,9 +1,22 @@
 - title: "Reproducible LLM Workflows in Economic History: Degener's Wer Ist's?"
   status: "Forthcoming"
-  venue: "Jahrbuch fuer Wirtschaftsgeschichte"
+  venue: "Jahrbuch für Wirtschaftsgeschichte"
   sort_order: 30
-  abstract: "A reproducible LLM-based workflow for converting dense historical print sources into structured data, demonstrated on Hermann A. L. Degener's Wer Ist's? (1911)."
-  citation: "Oeztuerk, Timur. \"Reproducible LLM Workflows in Economic History: Degener's Wer Ist's?\" Forthcoming in Jahrbuch fuer Wirtschaftsgeschichte."
+  abstract: >-
+    This paper develops a transparent and reproducible LLM-based workflow for
+    turning dense historical print sources into structured data, and
+    demonstrates it by digitizing Hermann A. L. Degener's Wer Ist's? (1911).
+    The source contains roughly 16,000 biographies spread across about 1,900
+    pages and is challenging due to dense typography, non-standard
+    abbreviations, and frequent minor errors. The workflow has modular steps
+    that are divided into small tasks, which also involve humans for
+    verification. These modular steps include image pre-processing and OCR,
+    biography assembly with sanity checks, variable identification, field
+    extraction, validation, and normalization that expands abbreviations while
+    flagging uncertainty. The workflow is also transparent; prompts, logs,
+    model responses, and outputs link each biography back to the original
+    source.
+  citation: "Oeztuerk, Timur. \"Reproducible LLM Workflows in Economic History: Degener's Wer Ist's?\" Forthcoming in Jahrbuch für Wirtschaftsgeschichte."
   websiteurl:
   paperurl:
   dataurl:
@@ -25,7 +38,39 @@
     - name: "Sebastian Braun"
       url: "https://sebastiantillbraun.com"
   sort_order: 20
-  abstract: "This paper studies how Catholic-Protestant divisions shaped fragmentation on the center-right and the rise of right-wing extremism from Weimar Germany to the Federal Republic."
+  abstract: >-
+    Why did the Weimar democracy collapse, while the Federal Republic of
+    Germany (FRG) achieved political stability? One key difference was the role
+    of confessional politics and its impact on party fragmentation and support
+    for the extreme right. This paper revisits the effect of denominational
+    divisions on electoral outcomes in Weimar Germany and postwar West
+    Germany. Catholic-Protestant divisions shaped political fragmentation on
+    the center-right and influenced the rise of right-wing extremism, from the
+    NSDAP's electoral breakthrough in the early 1930s to the NPD's emergence
+    in the late 1960s. We leverage historical variation in confessional
+    composition, which was created by the territorial fragmentation of
+    Southwest Germany and the principle of cuius regio, eius religio, as
+    established by the Peace of Augsburg in 1555. By comparing adjacent
+    Catholic and Protestant parishes, we find robust evidence that political
+    fragmentation is lowest in all-Catholic parishes and highest in parishes
+    with a significant Catholic minority. At the same time, higher Catholic
+    population shares significantly reduced Nazi vote shares in 1932. Turning
+    to the postwar period, we demonstrate that the formation of the Christian
+    Democratic Union (CDU) as an interdenominational Volkspartei altered these
+    dynamics. Although Catholics continued to vote disproportionately for the
+    CDU, Protestant areas remained more susceptible to far-right mobilization
+    following the rise of the right-wing NPD in the late 1960s. Finally, we
+    use individual-level survey data to shed light on the mechanisms through
+    which religion affects voting behavior. We demonstrate that Protestants
+    and Catholics had similar underlying political preferences. Rather, the
+    key distinction lay in attachment to the church and the churches'
+    perceived political stance: the Catholic Church was widely seen as
+    staunchly supporting the CDU and opposing the NPD. Followers who placed
+    high importance on the church aligned their voting choices accordingly,
+    refraining from supporting the far-right despite holding nationalistic
+    political convictions similar to others'. Our findings support the
+    argument that Catholicism primarily influenced voting behavior through the
+    clergy.
   citation: "Oeztuerk, Timur, and Sebastian Braun. \"From Weimar to West Germany: Confessional Politics, Party Fragmentation, and the Extreme Right.\" Working paper."
   websiteurl:
   paperurl:
@@ -43,7 +88,7 @@
     The linked repository contains the dataset and supporting research
     materials.
 
-- title: "Protestantism, Industrialization, and the Fertility Decline: Evidence from Religious Enclaves in Wuerttemberg, 1871-1933"
+- title: "Protestantism, Industrialization, and the Fertility Decline: Evidence from Religious Enclaves in Württemberg, 1871-1933"
   status: "Working paper"
   coauthors:
     - name: "Sebastian Braun"
@@ -51,15 +96,35 @@
     - name: "Richard Franke"
       url: "https://richard-franke.com"
   sort_order: 10
-  abstract: "Using parish-level data for 1,764 localities, this paper examines how Protestantism shaped the timing and geography of the fertility decline in the Kingdom of Wuerttemberg."
-  citation: "Oeztuerk, Timur, Sebastian Braun, and Richard Franke. \"Protestantism, Industrialization, and the Fertility Decline: Evidence from Religious Enclaves in Wuerttemberg, 1871-1933.\" Working paper."
+  abstract: >-
+    The fertility decline in industrializing Europe marks a turning point in
+    human history, and there is ongoing debate about its causes and their
+    relative importance. This paper examines the impact of Protestantism on
+    fertility decline in the southwestern German Kingdom of Württemberg,
+    1871-1930. Using data on the universe of 1,764 localities, we provide the
+    first large-scale descriptive evidence on the timing of fertility decline
+    at the parish level for Germany. We find that there is as much
+    heterogeneity in the timing of fertility decline within Württemberg as
+    there is across districts in Europe. To provide causal evidence on the
+    effect of religion on the timing of the fertility decline, we exploit that
+    religion was determined by decisions of local rulers in the 16th century,
+    decisions that are arguably exogenous to fertility decisions of people in
+    the 19th and 20th centuries. Furthermore, we show that neighboring
+    parishes do not differ in economic, geographic, or institutional
+    characteristics other than religion. Our results indicate that Protestant
+    parishes experienced the onset of fertility decline significantly earlier
+    than Catholic parishes, by about ten years. We hypothesize that an
+    interaction between religious norms, secularization, and differential
+    responses to changes in infant mortality drives the results and provide
+    preliminary evidence for this notion.
+  citation: "Oeztuerk, Timur, Sebastian Braun, and Richard Franke. \"Protestantism, Industrialization, and the Fertility Decline: Evidence from Religious Enclaves in Württemberg, 1871-1933.\" Working paper."
   websiteurl:
   paperurl:
   dataurl: "https://doi.org/10.3886/E236981V1"
   codeurl:
   summary: >-
     This project studies the relationship between Protestantism and fertility
-    decline in the Kingdom of Wuerttemberg between 1871 and 1933.
+    decline in the Kingdom of Württemberg between 1871 and 1933.
 
     Using data covering the universe of 1,764 localities, the paper provides
     large-scale descriptive evidence on the timing of fertility decline at the

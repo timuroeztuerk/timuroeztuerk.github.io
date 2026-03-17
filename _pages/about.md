@@ -3,6 +3,7 @@ permalink: /
 title: "About"
 author_profile: true
 show_title: false
+content_scale: compact
 redirect_from: 
   - /about/
   - /about.html

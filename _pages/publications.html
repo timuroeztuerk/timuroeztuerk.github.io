@@ -30,7 +30,7 @@ show_title: false
       {% endif %}
 
       {% if post.coauthors %}
-        <p>with <i>{% for coauthor in post.coauthors %}{% if coauthor.url %}<a href="{{ coauthor.url }}">{{ coauthor.name }}</a>{% else %}{{ coauthor.name }}{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</i></p>
+        <p class="archive__item-coauthors">with <i>{% for coauthor in post.coauthors %}{% if coauthor.url %}<a href="{{ coauthor.url }}">{{ coauthor.name }}</a>{% else %}{{ coauthor.name }}{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</i></p>
       {% endif %}
 
       {% assign abstract_text = post.abstract | default: post.excerpt %}

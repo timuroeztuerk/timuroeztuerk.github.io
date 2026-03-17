@@ -13,27 +13,33 @@ show_title: false
     <div class="talks-list">
       {% assign year_talks = talk_year.items | sort: "sort_order" %}
       {% for post in year_talks %}
-        <div class="list__item research-list__item talks-list__item">
+        <div class="list__item talks-list__item">
           <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
             <h3 class="archive__item-title" itemprop="headline">{{ post.title }}</h3>
 
-            {% capture meta %}
-              {% if post.event %}{{ post.event }}{% endif %}
-              {% if post.venue %}
-                {% if post.event %}, {% endif %}<i>{{ post.venue }}</i>
-              {% endif %}
-              {% if post.location %}
-                {% if post.event or post.venue %}, {% endif %}{{ post.location }}
-              {% endif %}
-            {% endcapture %}
-            {% assign meta = meta | strip %}
-            {% if meta != "" %}
-              <p>{{ meta }}</p>
+            {% if post.event %}
+              <p class="archive__item-talk-meta">{{ post.event }}</p>
+            {% endif %}
+
+            {% if post.venue %}
+              <p class="archive__item-talk-meta">{{ post.venue }}</p>
+            {% endif %}
+
+            {% if post.date %}
+              <p class="archive__item-talk-meta">{{ post.date }}</p>
+            {% endif %}
+
+            {% if post.location %}
+              <p class="archive__item-talk-meta">{{ post.location }}</p>
             {% endif %}
 
             {% if post.excerpt %}
               <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
             {% endif %}
+
+            <p class="archive__item-resources">
+              {% if post.slidesurl %}<a href="{{ post.slidesurl }}">Slides</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Slides</span>{% endif %}
+            </p>
           </article>
         </div>
       {% endfor %}

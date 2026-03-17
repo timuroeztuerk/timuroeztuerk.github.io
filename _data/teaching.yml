@@ -1,10 +1,13 @@
 - title: "Economic History"
   type: "Course"
-  venue: "Universitaet Bayreuth"
+  venue: "Universität Bayreuth"
   date_label: "2022W, 2023W, 2026S"
   level: "BSc and MSc"
   format: "Economic history"
   terms: "2022W, 2023W, 2026S"
+  codeurl:
+  repositoryurl:
+  slidesurl:
   sort_order: 10
   excerpt: "Teaching in economic history for undergraduate and graduate students."
   summary: >-
@@ -15,11 +18,14 @@
 
 - title: "Practice for Advanced Econometrics"
   type: "Course"
-  venue: "Universitaet Bayreuth"
+  venue: "Universität Bayreuth"
   date_label: "2021S, 2022W, 2023W"
   level: "MSc"
   format: "R"
   terms: "2021S, 2022W, 2023W"
+  codeurl:
+  repositoryurl:
+  slidesurl:
   sort_order: 20
   excerpt: "Applied econometrics practice course taught in R."
   summary: >-
@@ -29,11 +35,14 @@
 
 - title: "Refresher in Mathematics and Statistics"
   type: "Course"
-  venue: "Universitaet Bayreuth"
+  venue: "Universität Bayreuth"
   date_label: "2023W, 2024W, 2025W"
   level: "MSc"
   format: "R"
   terms: "2023W, 2024W, 2025W"
+  codeurl:
+  repositoryurl:
+  slidesurl:
   sort_order: 30
   excerpt: "Refresher course in mathematics and statistics for graduate students, taught in R."
   summary: >-
@@ -43,11 +52,14 @@
 
 - title: "Quantitative Methods in Economic History"
   type: "Course"
-  venue: "Universitaet Bayreuth"
+  venue: "Universität Bayreuth"
   date_label: "2026S"
   level: "MSc"
   format: "R"
   terms: "2026S"
+  codeurl:
+  repositoryurl:
+  slidesurl:
   sort_order: 40
   excerpt: "Graduate course on quantitative methods in economic history, taught in R."
   summary: >-
@@ -57,11 +69,14 @@
 
 - title: "Machine Learning and AI"
   type: "Course"
-  venue: "Universitaet Bayreuth"
+  venue: "Universität Bayreuth"
   date_label: "2025S, 2025W"
   level: "BSc and MSc"
   format: "Python"
   terms: "2025S, 2025W"
+  codeurl:
+  repositoryurl:
+  slidesurl:
   sort_order: 50
   excerpt: "Course on machine learning and AI methods, taught in Python."
   summary: >-
@@ -71,11 +86,14 @@
 
 - title: "Data Science for Economic Historians"
   type: "Course"
-  venue: "Universitaet Bayreuth"
+  venue: "Universität Bayreuth"
   date_label: "2023S, 2024S, 2025S"
   level: "MSc"
   format: "Python"
   terms: "2023S, 2024S, 2025S"
+  codeurl:
+  repositoryurl:
+  slidesurl:
   sort_order: 60
   excerpt: "Graduate course on data-science methods for economic historians, taught in Python."
   summary: >-

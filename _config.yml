@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Timur Öztürk"
 title_separator          : "-"
 name                     : &name "Timur Öztürk"
-description              : &description "Ph.D. candidate in economics at the University of Bayreuth. I study historical political economy and demographic change in Germany, combining archival sources with econometrics and AI-based digitization methods."   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Ph.D. candidate in economics at the University of Bayreuth. I study historical political economy and demographic change in Germany, combining archival sources with econometrics and AI based digitization methods."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://timurozturk.de # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,7 +26,7 @@ author:
   avatar           : "profile.png"
   name             : "Timur Öztürk"
   pronouns         : # example: "she/her"  
-  bio              : "Ph.D. Candidate in Economics at the University of Bayreuth. I study historical political economy and demographic change in Germany, combining archival sources with econometrics and AI-based digitization methods."
+  bio              : "Ph.D. Candidate in Economics at the University of Bayreuth. I study historical political economy and demographic change in Germany, combining archival sources with econometrics and AI based digitization methods."
   location         : "Bayreuth, Germany"
   employer         : "Universität Bayreuth"
   uri              : "https://timurozturk.de"
@@ -82,47 +82,14 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
-
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
-  disqus:
-    shortname            :
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+  provider               :
 atom_feed:
   hide                   : false     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
@@ -163,7 +130,6 @@ analytics:
 include:
   - .htaccess
   - _pages
-  - files
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -218,13 +184,6 @@ kramdown:
   enable_coderay: false
 
 
-# These settings control the types of collections used by the template
-collections:
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-
-
 # These settings control how pages and collections are included in the site
 defaults:
   # _posts
@@ -245,15 +204,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
 # Sass/SCSS
 sass:
   sass_dir: _sass

@@ -127,6 +127,12 @@
   }
 }
 
+.page__content--compact {
+  p, li, dl {
+    font-size: $type-size-6;
+  }
+}
+
 .page__hero {
   position: relative;
   margin-bottom: 2em;
