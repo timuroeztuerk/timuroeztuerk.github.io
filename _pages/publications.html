@@ -5,47 +5,45 @@ permalink: /research/
 redirect_from:
   - /publications/
 author_profile: true
+show_title: false
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<p>My research focuses on historical political economy, demographic change, religion, and long-run development in Germany. I work with archival digitization, econometrics, and reproducible computational workflows.</p>
-
-{% assign research_items = site.publications | sort: "sort_order" | reverse %}
+{% assign research_items = site.data.publications | sort: "sort_order" | reverse %}
 {% for post in research_items %}
-  <div class="list__item">
+  <div class="list__item research-list__item">
     <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-      <h2 class="archive__item-title" itemprop="headline">
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
-      </h2>
+      <h2 class="archive__item-title" itemprop="headline">{{ post.title }}</h2>
 
-      {% capture meta %}
-        {% if post.status %}{{ post.status }}{% endif %}
-        {% if post.venue %}
-          {% if post.status %}, {% endif %}<i>{{ post.venue }}</i>
+      {% capture status_label %}
+        {% if post.status == "Forthcoming" and post.venue %}
+          Forthcoming in {{ post.venue }}
+        {% elsif post.status %}
+          {{ post.status | replace: "paper", "Paper" }}
+        {% elsif post.venue %}
+          {{ post.venue }}
         {% endif %}
-        {% if post.coauthors %}, with {{ post.coauthors }}{% endif %}
       {% endcapture %}
-      {% assign meta = meta | strip %}
-      {% if meta != "" %}
-        <p>{{ meta }}</p>
+      {% assign status_label = status_label | strip %}
+      {% if status_label != "" %}
+        <p class="archive__item-status">{{ status_label }}</p>
       {% endif %}
 
-      {% if post.excerpt %}
-        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% if post.coauthors %}
+        <p>with <i>{% for coauthor in post.coauthors %}{% if coauthor.url %}<a href="{{ coauthor.url }}">{{ coauthor.name }}</a>{% else %}{{ coauthor.name }}{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</i></p>
       {% endif %}
 
-      {% if post.paperurl or post.dataurl or post.codeurl %}
-        <p>
-          {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% endif %}
-          {% if post.dataurl %}{% if post.paperurl %} | {% endif %}<a href="{{ post.dataurl }}">Dataset</a>{% endif %}
-          {% if post.codeurl %}{% if post.paperurl or post.dataurl %} | {% endif %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
-        </p>
+      {% assign abstract_text = post.abstract | default: post.excerpt %}
+      {% if abstract_text %}
+        <p class="archive__item-excerpt" itemprop="description">{{ abstract_text | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% endif %}
+
+      <p class="archive__item-resources">
+        {% if post.websiteurl %}<a href="{{ post.websiteurl }}">Website</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Website</span>{% endif %} |
+        {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Paper</span>{% endif %} |
+        {% if post.dataurl %}<a href="{{ post.dataurl }}">Dataset</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Dataset</span>{% endif %} |
+        {% if post.codeurl %}<a href="{{ post.codeurl }}">Code</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Code</span>{% endif %}
+      </p>
     </article>
   </div>
 {% endfor %}

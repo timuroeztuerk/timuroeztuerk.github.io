@@ -1,0 +1,89 @@
+# Optional fields per talk: date, location, excerpt, slidesurl, paperurl, videourl
+
+- title: "EHES at WU Vienna"
+  year: 2023
+  event: "EHES"
+  venue: "WU Vienna"
+  sort_order: 10
+  location:
+  excerpt:
+
+- title: "Transkribus at University of Innsbruck"
+  year: 2023
+  event: "Transkribus"
+  venue: "University of Innsbruck"
+  sort_order: 20
+  location:
+  excerpt:
+
+- title: "GSWG at University of Leipzig"
+  year: 2023
+  event: "GSWG"
+  venue: "University of Leipzig"
+  sort_order: 30
+  location:
+  excerpt:
+
+- title: "CEPH at Trinity College Dublin"
+  year: 2024
+  event: "CEPH"
+  venue: "Trinity College Dublin"
+  sort_order: 10
+  location:
+  excerpt:
+
+- title: "EHS at Northumbria University"
+  year: 2024
+  event: "EHS"
+  venue: "Northumbria University"
+  sort_order: 20
+  location:
+  excerpt:
+
+- title: "GSWG at Humboldt"
+  year: 2025
+  event: "GSWG"
+  venue: "Humboldt"
+  sort_order: 10
+  location:
+  excerpt:
+
+- title: "WEHC at Lund University"
+  year: 2025
+  event: "WEHC"
+  venue: "Lund University"
+  sort_order: 20
+  location:
+  excerpt:
+
+- title: "EHES at University of Hohenheim"
+  year: 2025
+  event: "EHES"
+  venue: "University of Hohenheim"
+  sort_order: 30
+  location:
+  excerpt:
+
+- title: "VfS at University of Cologne"
+  year: 2025
+  event: "VfS"
+  venue: "University of Cologne"
+  sort_order: 40
+  location:
+  excerpt:
+
+- title: "CEPR in St. Gallen"
+  year: 2026
+  event: "CEPR"
+  venue: "St. Gallen"
+  sort_order: 10
+  location:
+  excerpt:
+
+- title: "Economic History Society in London"
+  year: 2026
+  event: "Economic History Society"
+  venue: "London"
+  sort_order: 20
+  location:
+  excerpt:

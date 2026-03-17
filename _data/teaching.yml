@@ -1,0 +1,84 @@
+- title: "Economic History"
+  type: "Course"
+  venue: "Universitaet Bayreuth"
+  date_label: "2022W, 2023W, 2026S"
+  level: "BSc and MSc"
+  format: "Economic history"
+  terms: "2022W, 2023W, 2026S"
+  sort_order: 10
+  excerpt: "Teaching in economic history for undergraduate and graduate students."
+  summary: >-
+    This course covers core topics in economic history for undergraduate and
+    graduate students. Teaching draws on long-run historical evidence and
+    connects institutional, political, and demographic change to economic
+    development.
+
+- title: "Practice for Advanced Econometrics"
+  type: "Course"
+  venue: "Universitaet Bayreuth"
+  date_label: "2021S, 2022W, 2023W"
+  level: "MSc"
+  format: "R"
+  terms: "2021S, 2022W, 2023W"
+  sort_order: 20
+  excerpt: "Applied econometrics practice course taught in R."
+  summary: >-
+    This course supports graduate students in applying advanced econometric
+    methods in R. It focuses on implementation, replication, and practical
+    problem-solving with empirical datasets.
+
+- title: "Refresher in Mathematics and Statistics"
+  type: "Course"
+  venue: "Universitaet Bayreuth"
+  date_label: "2023W, 2024W, 2025W"
+  level: "MSc"
+  format: "R"
+  terms: "2023W, 2024W, 2025W"
+  sort_order: 30
+  excerpt: "Refresher course in mathematics and statistics for graduate students, taught in R."
+  summary: >-
+    This refresher course supports graduate students in mathematics and
+    statistics with applied work in R. It is designed to strengthen the
+    quantitative foundations needed for later empirical coursework.
+
+- title: "Quantitative Methods in Economic History"
+  type: "Course"
+  venue: "Universitaet Bayreuth"
+  date_label: "2026S"
+  level: "MSc"
+  format: "R"
+  terms: "2026S"
+  sort_order: 40
+  excerpt: "Graduate course on quantitative methods in economic history, taught in R."
+  summary: >-
+    This course introduces quantitative methods used in modern economic
+    history research. Students work with empirical data and applied tools in R
+    to study long-run historical change.
+
+- title: "Machine Learning and AI"
+  type: "Course"
+  venue: "Universitaet Bayreuth"
+  date_label: "2025S, 2025W"
+  level: "BSc and MSc"
+  format: "Python"
+  terms: "2025S, 2025W"
+  sort_order: 50
+  excerpt: "Course on machine learning and AI methods, taught in Python."
+  summary: >-
+    This course introduces machine-learning and AI methods in Python for
+    undergraduate and graduate students. It emphasizes applied workflows that
+    are useful for empirical social-science and historical data analysis.
+
+- title: "Data Science for Economic Historians"
+  type: "Course"
+  venue: "Universitaet Bayreuth"
+  date_label: "2023S, 2024S, 2025S"
+  level: "MSc"
+  format: "Python"
+  terms: "2023S, 2024S, 2025S"
+  sort_order: 60
+  excerpt: "Graduate course on data-science methods for economic historians, taught in Python."
+  summary: >-
+    This course introduces data-science workflows for economic historians
+    using Python. It focuses on practical data handling, reproducibility, and
+    computational tools for working with historical datasets.

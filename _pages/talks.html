@@ -3,25 +3,40 @@ layout: archive
 title: "Talks"
 permalink: /talks/
 author_profile: true
+show_title: false
 ---
 
-<p>Selected research presentations and workshop appearances.</p>
+{% assign talks_by_year = site.data.talks | group_by: "year" | reverse %}
+{% for talk_year in talks_by_year %}
+  <section class="talks-year">
+    <h2 class="archive__subtitle">{{ talk_year.name }}</h2>
+    <div class="talks-list">
+      {% assign year_talks = talk_year.items | sort: "sort_order" %}
+      {% for post in year_talks %}
+        <div class="list__item research-list__item talks-list__item">
+          <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+            <h3 class="archive__item-title" itemprop="headline">{{ post.title }}</h3>
 
-{% assign talk_items = site.talks | sort: "year" | reverse %}
-{% for post in talk_items %}
-  <div class="list__item">
-    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-      <h2 class="archive__item-title" itemprop="headline">
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
-      </h2>
+            {% capture meta %}
+              {% if post.event %}{{ post.event }}{% endif %}
+              {% if post.venue %}
+                {% if post.event %}, {% endif %}<i>{{ post.venue }}</i>
+              {% endif %}
+              {% if post.location %}
+                {% if post.event or post.venue %}, {% endif %}{{ post.location }}
+              {% endif %}
+            {% endcapture %}
+            {% assign meta = meta | strip %}
+            {% if meta != "" %}
+              <p>{{ meta }}</p>
+            {% endif %}
 
-      {% if post.year %}
-        <p class="page__meta"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ post.year }}</p>
-      {% endif %}
-
-      {% if post.excerpt %}
-        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-      {% endif %}
-    </article>
-  </div>
+            {% if post.excerpt %}
+              <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+            {% endif %}
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
 {% endfor %}

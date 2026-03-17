@@ -39,9 +39,16 @@ $type-size-6                : 0.75em;   // ~12px
 $type-size-7                : 0.6875em; // ~11px
 $type-size-8                : 0.625em;  // ~10px
 
+$content-title-size         : 1.25rem;
+$content-body-size          : 1rem;
+$content-meta-size          : 0.875rem;
+$content-caption-size       : 0.75rem;
+$content-line-height        : 1.65;
+$content-meta-line-height   : 1.45;
+
 $global-font-family         : $sans-serif;
 $header-font-family         : $sans-serif;
-$caption-font-family        : $serif;
+$caption-font-family        : $sans-serif;
 
 /* ==========================================================================
    Breakpoints

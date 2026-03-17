@@ -35,7 +35,20 @@ layout: default
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
-        {% if page.talk_type %}<p>{{page.talk_type}} at {{ page.venue }},  {{page.location}} {% endif %}
+        {% capture talk_meta %}
+          {% if page.event %}{{ page.event }}{% endif %}
+          {% if page.venue %}
+            {% if page.event %}, {% endif %}<i>{{ page.venue }}</i>
+          {% endif %}
+          {% if page.location %}
+            {% if page.event or page.venue %}, {% endif %}{{ page.location }}
+          {% endif %}
+          {% if page.year and page.date == nil %}
+            {% if page.event or page.venue or page.location %}, {% endif %}{{ page.year }}
+          {% endif %}
+        {% endcapture %}
+        {% assign talk_meta = talk_meta | strip %}
+        {% if talk_meta != "" %}<p>{{ talk_meta }}</p>{% endif %}
 
         </header>
       {% endunless %}

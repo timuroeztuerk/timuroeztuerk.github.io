@@ -27,6 +27,10 @@
   @include breakpoint($large) {
     @include span(2 of 12);
     opacity: 1;
+    background-image: linear-gradient(var(--global-border-color), var(--global-border-color));
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 1px 100%;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
 
@@ -143,7 +147,9 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 36px;
+  width: 200px;
+  min-width: 200px;
+  text-align: center;
   // set width only, for non-square avatars
   // height: 36px;
 
@@ -154,7 +160,14 @@
   }
 
   img {
-    max-width: 175px;
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
     border-radius: 50%;
 
     @include breakpoint($large) {
@@ -170,17 +183,21 @@
   padding-left: 15px;
   padding-right: 25px;
   line-height: 1;
+  text-align: justify;
+  hyphens: auto;
+  overflow-wrap: break-word;
 
   @include breakpoint($large) {
     display: block;
     width: 100%;
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 0.75em;
   }
 }
 
 .author__name {
   margin: 0;
+  text-align: center;
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -225,6 +242,7 @@
   z-index: 10;
   position: relative;
   cursor: pointer;
+  text-align: justify;
 
   li:last-child {
     a {
@@ -234,6 +252,7 @@
 
   @include breakpoint($large) {
     display: block;
+    padding-right: 0.75em;
   }
 
   button {

@@ -1,0 +1,69 @@
+- title: "Reproducible LLM Workflows in Economic History: Degener's Wer Ist's?"
+  status: "Forthcoming"
+  venue: "Jahrbuch fuer Wirtschaftsgeschichte"
+  sort_order: 30
+  abstract: "A reproducible LLM-based workflow for converting dense historical print sources into structured data, demonstrated on Hermann A. L. Degener's Wer Ist's? (1911)."
+  citation: "Oeztuerk, Timur. \"Reproducible LLM Workflows in Economic History: Degener's Wer Ist's?\" Forthcoming in Jahrbuch fuer Wirtschaftsgeschichte."
+  websiteurl:
+  paperurl:
+  dataurl:
+  codeurl: "https://github.com/timuroeztuerk/degener"
+  summary: >-
+    This project develops a transparent and reproducible workflow for using
+    large language models to turn dense historical print sources into
+    structured research data.
+
+    The paper demonstrates the workflow by digitizing Hermann A. L. Degener's
+    Wer Ist's? (1911) and discusses how historians can combine OCR,
+    preprocessing, and LLM-assisted extraction without losing reproducibility.
+
+    Code and materials are available in the repository linked above.
+
+- title: "From Weimar to West Germany: Confessional Politics, Party Fragmentation, and the Extreme Right"
+  status: "Working paper"
+  coauthors:
+    - name: "Sebastian Braun"
+      url: "https://sebastiantillbraun.com"
+  sort_order: 20
+  abstract: "This paper studies how Catholic-Protestant divisions shaped fragmentation on the center-right and the rise of right-wing extremism from Weimar Germany to the Federal Republic."
+  citation: "Oeztuerk, Timur, and Sebastian Braun. \"From Weimar to West Germany: Confessional Politics, Party Fragmentation, and the Extreme Right.\" Working paper."
+  websiteurl:
+  paperurl:
+  dataurl: "https://github.com/timuroeztuerk/baden-württemberg"
+  codeurl:
+  summary: >-
+    This paper revisits the long-run political consequences of denominational
+    divisions in Germany.
+
+    It traces how Catholic-Protestant cleavages shaped electoral fragmentation
+    on the center-right and influenced the rise of the extreme right, from the
+    NSDAP's electoral breakthrough in the early 1930s to the NPD's emergence
+    in the late 1960s.
+
+    The linked repository contains the dataset and supporting research
+    materials.
+
+- title: "Protestantism, Industrialization, and the Fertility Decline: Evidence from Religious Enclaves in Wuerttemberg, 1871-1933"
+  status: "Working paper"
+  coauthors:
+    - name: "Sebastian Braun"
+      url: "https://sebastiantillbraun.com"
+    - name: "Richard Franke"
+      url: "https://richard-franke.com"
+  sort_order: 10
+  abstract: "Using parish-level data for 1,764 localities, this paper examines how Protestantism shaped the timing and geography of the fertility decline in the Kingdom of Wuerttemberg."
+  citation: "Oeztuerk, Timur, Sebastian Braun, and Richard Franke. \"Protestantism, Industrialization, and the Fertility Decline: Evidence from Religious Enclaves in Wuerttemberg, 1871-1933.\" Working paper."
+  websiteurl:
+  paperurl:
+  dataurl: "https://doi.org/10.3886/E236981V1"
+  codeurl:
+  summary: >-
+    This project studies the relationship between Protestantism and fertility
+    decline in the Kingdom of Wuerttemberg between 1871 and 1933.
+
+    Using data covering the universe of 1,764 localities, the paper provides
+    large-scale descriptive evidence on the timing of fertility decline at the
+    parish level in Germany and links religious enclaves to broader processes
+    of demographic change and industrialization.
+
+    The linked dataset is publicly available through the DOI above.

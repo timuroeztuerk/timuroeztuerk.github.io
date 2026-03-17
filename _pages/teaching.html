@@ -3,19 +3,16 @@ layout: archive
 title: "Teaching"
 permalink: /teaching/
 author_profile: true
+show_title: false
 ---
 
 {% include base_path %}
 
-<p>Teaching in economic history, quantitative methods, and data science at Universität Bayreuth.</p>
-
-{% assign teaching_items = site.teaching | sort: "sort_order" | reverse %}
+{% assign teaching_items = site.data.teaching | sort: "sort_order" | reverse %}
 {% for post in teaching_items %}
-  <div class="list__item">
+  <div class="list__item research-list__item teaching-list__item">
     <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-      <h2 class="archive__item-title" itemprop="headline">
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
-      </h2>
+      <h2 class="archive__item-title" itemprop="headline">{{ post.title }}</h2>
 
       {% capture meta %}
         {% if post.level %}{{ post.level }}{% endif %}
