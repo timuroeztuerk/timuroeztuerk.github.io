@@ -26,10 +26,6 @@ show_title: false
         <p class="archive__item-teaching-meta">{{ post.terms }}</p>
       {% endif %}
 
-      {% if post.excerpt %}
-        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-      {% endif %}
-
       <p class="archive__item-resources">
         {% if post.codeurl %}<a href="{{ post.codeurl }}">Code</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Code</span>{% endif %} |
         {% if post.repositoryurl %}<a href="{{ post.repositoryurl }}">Repository</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Repository</span>{% endif %} |
