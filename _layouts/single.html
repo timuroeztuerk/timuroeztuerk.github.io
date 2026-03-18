@@ -15,6 +15,12 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
+  {% if page.banner_title %}
+    <header class="page__banner">
+      <h1 class="page__banner-title">{{ page.banner_title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+    </header>
+  {% endif %}
+
   {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
