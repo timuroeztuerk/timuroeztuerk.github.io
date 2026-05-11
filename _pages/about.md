@@ -14,8 +14,8 @@ I am a Ph.D. Candidate in Economics at the [University of Bayreuth](https://www.
 
 My research focuses on political behavior, demographic change, and religious affiliation in Germany between the mid-nineteenth and mid-twentieth centuries. Methodologically, I combine archival digitization, econometrics, and machine learning to build novel historical datasets. More recently, I have developed reproducible LLM-based workflows for large-scale digitization of historical sources, which is forthcoming in the *Jahrbuch für Wirtschaftsgeschichte*. You can access my research papers and projects on the [Research](/research/) page.
 
-Want to know more about the LLM Project? Check out the [LLM Project](/degener/) page for more details and updates.
+For more details and updates on the LLM digitization project, visit the [LLM Project](/degener/) page.
 
-Are you interested in learning more about our Baden-Würrtemberg projects? Visit the [Baden-Württemberg Project](/baden-wuerttemberg/) page for insights and findings.
+For insights and findings from our Baden-Württemberg project, visit the [Baden-Württemberg Project](/baden-wuerttemberg/) page.
 
 I have taught courses in data science, machine learning and AI, econometrics, and economic history at both the undergraduate and graduate level, using Python and R. My courses combine lectures with hands-on coding sessions and collaborative projects. Details are on the [Teaching](/teaching/) page.

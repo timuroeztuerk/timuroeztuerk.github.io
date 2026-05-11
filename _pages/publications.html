@@ -33,17 +33,33 @@ show_title: false
         <p class="archive__item-coauthors">with <i>{% for coauthor in post.coauthors %}{% if coauthor.url %}<a href="{{ coauthor.url }}">{{ coauthor.name }}</a>{% else %}{{ coauthor.name }}{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</i></p>
       {% endif %}
 
-      {% assign abstract_text = post.abstract | default: post.excerpt %}
-      {% if abstract_text %}
-        <p class="archive__item-excerpt" itemprop="description">{{ abstract_text | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% assign summary_text = post.summary | default: post.excerpt %}
+      {% if summary_text %}
+        <div class="archive__item-summary" itemprop="description">{{ summary_text | markdownify }}</div>
+      {% elsif post.abstract %}
+        <div class="archive__item-summary" itemprop="description">{{ post.abstract | markdownify }}</div>
       {% endif %}
 
-      <p class="archive__item-resources">
-        {% if post.websiteurl %}<a href="{{ post.websiteurl }}">Website</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Website</span>{% endif %} |
-        {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Paper</span>{% endif %} |
-        {% if post.dataurl %}<a href="{{ post.dataurl }}">Dataset</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Dataset</span>{% endif %} |
-        {% if post.codeurl %}<a href="{{ post.codeurl }}">Code</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Code</span>{% endif %}
-      </p>
+      {% if post.abstract and summary_text %}
+        <details class="archive__item-abstract">
+          <summary>Abstract</summary>
+          {{ post.abstract | markdownify }}
+        </details>
+      {% endif %}
+
+      {% assign has_resource = false %}
+      {% if post.websiteurl or post.paperurl or post.dataurl or post.codeurl %}
+        {% assign has_resource = true %}
+      {% endif %}
+      {% if has_resource %}
+        <p class="archive__item-resources">
+          {% assign needs_separator = false %}
+          {% if post.websiteurl %}<a href="{{ post.websiteurl }}">Website</a>{% assign needs_separator = true %}{% endif %}
+          {% if post.paperurl %}{% if needs_separator %} | {% endif %}<a href="{{ post.paperurl }}">Paper</a>{% assign needs_separator = true %}{% endif %}
+          {% if post.dataurl %}{% if needs_separator %} | {% endif %}<a href="{{ post.dataurl }}">Dataset</a>{% assign needs_separator = true %}{% endif %}
+          {% if post.codeurl %}{% if needs_separator %} | {% endif %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
+        </p>
+      {% endif %}
     </article>
   </div>
 {% endfor %}

@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Timur Öztürk"
 title_separator          : "-"
 name                     : &name "Timur Öztürk"
-description              : &description "Ph.D. candidate in economics at the University of Bayreuth. I study historical political economy and demographic change in Germany, combining archival sources with econometrics and AI based digitization methods."   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Ph.D. candidate in economics at the University of Bayreuth. I study historical political economy and demographic change in Germany, combining archival sources with econometrics and AI-based digitization methods."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://timurozturk.de # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,7 +26,7 @@ author:
   avatar           : "profile.png"
   name             : "Timur Öztürk"
   pronouns         : # example: "she/her"  
-  bio              : "Ph.D. Candidate in Economics at the University of Bayreuth. I study historical political economy and demographic change in Germany, combining archival sources with econometrics and AI based digitization methods."
+  bio              : "Ph.D. Candidate in Economics at the University of Bayreuth. I study historical political economy and demographic change in Germany, combining archival sources with econometrics and AI-based digitization methods."
   location         : "Bayreuth, Germany"
   employer         : "Universität Bayreuth"
   uri              : "https://timurozturk.de"

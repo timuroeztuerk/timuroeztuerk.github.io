@@ -37,9 +37,11 @@ show_title: false
               <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
             {% endif %}
 
-            <p class="archive__item-resources">
-              {% if post.slidesurl %}<a href="{{ post.slidesurl }}">Slides</a>{% else %}<span class="archive__item-resource archive__item-resource--disabled">Slides</span>{% endif %}
-            </p>
+            {% if post.slidesurl %}
+              <p class="archive__item-resources">
+                <a href="{{ post.slidesurl }}">Slides</a>
+              </p>
+            {% endif %}
           </article>
         </div>
       {% endfor %}
