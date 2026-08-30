@@ -179,13 +179,20 @@
 
   a {
     display: block;
-    margin: 0 1rem;
+    margin: 0 1.125rem;
     padding: 0.5rem 0;
     color: var(--global-masthead-link-color);
     text-decoration: none;
+    transition: color 0.16s ease;
 
     &:hover {
       color: var(--global-masthead-link-color-hover);
+    }
+
+    &:focus-visible {
+      color: var(--global-masthead-link-color-hover);
+      outline: 2px solid var(--global-masthead-link-color-hover);
+      outline-offset: 4px;
     }
   }
 
@@ -237,11 +244,11 @@
       &:before {
         content: "";
         position: absolute;
-        left: 0;
+        left: 20%;
         bottom: 0;
-        height: 4px;
-        background: var(--global-border-color);
-        width: 100%;
+        height: 1px;
+        background: var(--global-masthead-link-color-hover);
+        width: 60%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
         -webkit-transform: scaleX(0);
@@ -254,6 +261,12 @@
             -ms-transform: scaleX(1);
                 transform: scaleX(1); /* reveal*/
       }
+    }
+
+    .selected a:before {
+      -webkit-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+              transform: scaleX(1);
     }
   }
 

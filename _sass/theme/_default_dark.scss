@@ -2,20 +2,19 @@
     DEFAULT THEME - DARK VERSION
     ========================================================================== */
 
-/* Color codes used for the theme */
-$primary-color              : #0ea1c5;
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-
-$background                 : #474747;
-$background-light           : mix(#fff, $background, 80%);
-$background-lighter         : mix(#fff, $background, 90%);
-$text                       : #ffffff;
-$link                       : #0ea1c5;
-$link-dark                  : mix(#000, $link, 25%);
-$link-light                 : mix(#fff, $link, 25%);
+/* Dark counterpart to the research-atlas palette. */
+$primary-color              : #ff725c;
+$background                 : #101419;
+$background-light           : #1b2128;
+$background-lighter         : #252c34;
+$text                       : #f1f3ef;
+$text-muted                 : #a6adb5;
+$border                     : #313944;
+$border-dark                : #4b5662;
+$link                       : #78a7ff;
+$link-hover                 : #b3cdff;
+$link-visited               : #b59bdc;
+$footer                     : #080b0f;
 
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
@@ -38,19 +37,18 @@ $sidebar-screen-min-width   : 1024px;
 html[data-theme="dark"] {
     --global-base-color                 : #{$primary-color};
     --global-bg-color                   : #{$background};
-    --global-footer-bg-color            : #{$background};
-    --global-border-color               : #{$light-gray};
-    --global-dark-border-color          : #{$background-light};
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : #{$light-gray};
+    --global-footer-bg-color            : #{$footer};
+    --global-border-color               : #{$border};
+    --global-dark-border-color          : #{$border-dark};
+    --global-code-background-color      : #{$background-light};
+    --global-code-text-color            : #{$text};
+    --global-fig-caption-color          : #{$text-muted};
     --global-link-color                 : #{$link};
-    --global-link-color-hover           : #{$link-dark};
-    --global-link-color-visited         : #{$link-light};
+    --global-link-color-hover           : #{$link-hover};
+    --global-link-color-visited         : #{$link-visited};
     --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-masthead-link-color-hover  : #{$link};
     --global-text-color                 : #{$text};
-    --global-text-color-light           : #f3f3f3;
+    --global-text-color-light           : #{$text-muted};
     --global-thead-color                : #{$background-lighter};
 }
-

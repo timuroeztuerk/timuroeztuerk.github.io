@@ -6,6 +6,22 @@
    TYPOGRAPHY
    ========================================================================== */
 
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("../fonts/atkinson-hyperlegible-next/AtkinsonHyperlegibleNext-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("../fonts/atkinson-hyperlegible-next/AtkinsonHyperlegibleNext-Italic-Variable.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+}
+
 /* Used to set the size for <em> */
 $doc-font-size              : 16;
 
@@ -13,9 +29,9 @@ $doc-font-size              : 16;
 $paragraph-indent           : false; // true, false (default)
 $indent-var                 : 1.3em;
 
-/* System typefaces */
+/* Site typefaces */
 $serif                      : Georgia, Times, serif;
-$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$sans-serif                 : "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", Verdana, Arial, sans-serif;
 $monospace                  : Monaco, Consolas, "Lucida Console", monospace;
 
 /* Sans serif typefaces */
