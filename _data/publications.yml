@@ -30,58 +30,41 @@
     Wer Ist's? (1911) and discusses how historians can combine OCR,
     preprocessing, and LLM-assisted extraction without losing reproducibility.
 
-- title: "From Weimar to West Germany: Confessional Politics, Party Fragmentation, and the Extreme Right"
-  status: "Working paper"
+- title: "From Weimar to West Germany: Confessional Cleavages, Party Fragmentation, and Far-Right Voting"
+  status: "Kiel Working Paper No. 2324, June 2026"
   coauthors:
     - name: "Sebastian Braun"
       url: "https://sebastiantillbraun.com"
   sort_order: 20
   abstract: >-
-    Why did the Weimar democracy collapse, while the Federal Republic of
-    Germany (FRG) achieved political stability? One key difference was the role
-    of confessional politics and its impact on party fragmentation and support
-    for the extreme right. This paper revisits the effect of denominational
-    divisions on electoral outcomes in Weimar Germany and postwar West
-    Germany. Catholic-Protestant divisions shaped political fragmentation on
-    the center-right and influenced the rise of right-wing extremism, from the
-    NSDAP's electoral breakthrough in the early 1930s to the NPD's emergence
-    in the late 1960s. We leverage historical variation in confessional
-    composition, which was created by the territorial fragmentation of
-    Southwest Germany and the principle of cuius regio, eius religio, as
-    established by the Peace of Augsburg in 1555. By comparing adjacent
-    Catholic and Protestant parishes, we find robust evidence that political
-    fragmentation is lowest in all-Catholic parishes and highest in parishes
-    with a significant Catholic minority. At the same time, higher Catholic
-    population shares significantly reduced Nazi vote shares in 1932. Turning
-    to the postwar period, we demonstrate that the formation of the Christian
-    Democratic Union (CDU) as an interdenominational Volkspartei altered these
-    dynamics. Although Catholics continued to vote disproportionately for the
-    CDU, Protestant areas remained more susceptible to far-right mobilization
-    following the rise of the right-wing NPD in the late 1960s. Finally, we
-    use individual-level survey data to shed light on the mechanisms through
-    which religion affects voting behavior. We demonstrate that Protestants
-    and Catholics had similar underlying political preferences. Rather, the
-    key distinction lay in attachment to the church and the churches'
-    perceived political stance: the Catholic Church was widely seen as
-    staunchly supporting the CDU and opposing the NPD. Followers who placed
-    high importance on the church aligned their voting choices accordingly,
-    refraining from supporting the far-right despite holding nationalistic
-    political convictions similar to others'. Our findings support the
-    argument that Catholicism primarily influenced voting behavior through the
-    clergy.
-  citation: "Oeztuerk, Timur, and Sebastian Braun. \"From Weimar to West Germany: Confessional Politics, Party Fragmentation, and the Extreme Right.\" Working paper."
-  websiteurl:
-  paperurl:
+    How do social cleavages affect party-system fragmentation, and what changes
+    when parties organize across rather than along those divides? We study the
+    Catholic-Protestant cleavage in Germany from the Weimar Republic through
+    the postwar period using the confessional mosaic of Baden and Württemberg.
+    Based on more than 3,000 parishes, we document a hump-shaped relationship
+    between the Catholic population share and electoral fragmentation in
+    Weimar Germany: fragmentation was greatest in mixed parishes, where a
+    cohesive Catholic bloc faced a divided Protestant center-right. The Nazi
+    Party subsequently consolidated much of that fragmented Protestant vote
+    during the Great Depression. After 1945, the cross-confessional CDU
+    weakened the relationship between religion and fragmentation. Catholic
+    areas nevertheless remained less receptive to the far right, a persistence
+    that survey evidence links to church influence rather than differences in
+    policy preferences. The results show that the political effects of social
+    cleavages depend on how parties and organizations mobilize them.
+  citation: "Braun, Sebastian T., and Timur Öztürk. 2026. \"From Weimar to West Germany: Confessional Cleavages, Party Fragmentation, and Far-Right Voting.\" Kiel Working Paper No. 2324. Kiel Institute for the World Economy."
+  websiteurl: "https://www.kielinstitut.de/publications/from-weimar-to-west-germany-confessional-cleavages-party-fragmentation-and-far-right-voting-19909/"
+  paperurl: "https://www.kielinstitut.de/fileadmin/Dateiverwaltung/IfW-Publications/fis-import/fd1ac0af-5181-4d4b-98db-4b1c39b98da7-KWP_2324.pdf"
   dataurl: "https://github.com/timuroeztuerk/baden-württemberg"
   codeurl:
   summary: >-
-    This paper revisits the long-run political consequences of denominational
-    divisions in Germany.
+    Using parish-level data for Baden and Württemberg, this paper studies how
+    Catholic-Protestant cleavages shaped electoral fragmentation from Weimar
+    Germany into the postwar period.
 
-    It traces how Catholic-Protestant cleavages shaped electoral fragmentation
-    on the center-right and influenced the rise of the extreme right, from the
-    NSDAP's electoral breakthrough in the early 1930s to the NPD's emergence
-    in the late 1960s.
+    It shows how Nazi and later CDU mobilization changed the political effects
+    of the religious divide, while Catholic areas remained less susceptible to
+    far-right voting.
 
 - title: "Protestantism, Industrialization, and the Fertility Decline: Evidence from Religious Enclaves in Württemberg, 1871-1933"
   status: "Working paper"

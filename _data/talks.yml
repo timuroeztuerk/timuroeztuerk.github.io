@@ -1,9 +1,9 @@
-# Optional fields per talk: date, location, excerpt, slidesurl
+# Optional fields per talk: paper_title, date, location, excerpt, slidesurl, paperurl
 
 - title: "EHES at WU Vienna"
   year: 2023
-  event: "EHES"
-  venue: "WU Vienna"
+  event: "European Historical Economics Society (EHES)"
+  venue: "Vienna University of Economics and Business"
   sort_order: 10
   date:
   location:
@@ -22,7 +22,7 @@
 
 - title: "GSWG at University of Leipzig"
   year: 2023
-  event: "GSWG"
+  event: "Gesellschaft für Sozial- und Wirtschaftsgeschichte (GSWG)"
   venue: "University of Leipzig"
   sort_order: 30
   date:
@@ -32,7 +32,7 @@
 
 - title: "CEPH at Trinity College Dublin"
   year: 2024
-  event: "CEPH"
+  event: "Centre for Economics, Policy and History (CEPH)"
   venue: "Trinity College Dublin"
   sort_order: 10
   date:
@@ -42,7 +42,7 @@
 
 - title: "EHS at Northumbria University"
   year: 2024
-  event: "EHS"
+  event: "Economic History Society (EHS)"
   venue: "Northumbria University"
   sort_order: 20
   date:
@@ -52,7 +52,7 @@
 
 - title: "GSWG at Humboldt-Universität zu Berlin"
   year: 2025
-  event: "GSWG"
+  event: "Gesellschaft für Sozial- und Wirtschaftsgeschichte (GSWG)"
   venue: "Humboldt-Universität zu Berlin"
   sort_order: 10
   date:
@@ -62,7 +62,7 @@
 
 - title: "WEHC at Lund University"
   year: 2025
-  event: "WEHC"
+  event: "World Economic History Congress (WEHC)"
   venue: "Lund University"
   sort_order: 20
   date:
@@ -72,7 +72,7 @@
 
 - title: "EHES at University of Hohenheim"
   year: 2025
-  event: "EHES"
+  event: "European Historical Economics Society (EHES)"
   venue: "University of Hohenheim"
   sort_order: 30
   date:
@@ -82,7 +82,7 @@
 
 - title: "VfS at University of Cologne"
   year: 2025
-  event: "VfS"
+  event: "Verein für Socialpolitik (VfS)"
   venue: "University of Cologne"
   sort_order: 40
   date:
@@ -92,7 +92,7 @@
 
 - title: "CEPR in St. Gallen"
   year: 2026
-  event: "CEPR"
+  event: "Centre for Economic Policy Research (CEPR)"
   venue: "St. Gallen"
   sort_order: 10
   date:
@@ -102,7 +102,7 @@
 
 - title: "Economic History Society in London"
   year: 2026
-  event: "Economic History Society"
+  event: "Economic History Society (EHS)"
   venue: "London"
   sort_order: 20
   date:

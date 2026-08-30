@@ -6,7 +6,7 @@ author_profile: true
 show_title: false
 ---
 
-{% assign talks_by_year = site.data.talks | group_by: "year" | reverse %}
+{% assign talks_by_year = site.data.talks | group_by: "year" | sort: "name" | reverse %}
 {% for talk_year in talks_by_year %}
   <section class="talks-year">
     <h2 class="archive__subtitle">{{ talk_year.name }}</h2>
@@ -15,31 +15,31 @@ show_title: false
       {% for post in year_talks %}
         <div class="list__item talks-list__item">
           <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-            <h3 class="archive__item-title" itemprop="headline">{{ post.title }}</h3>
+            {% assign talk_title = post.paper_title | default: post.event | default: post.title %}
+            <h3 class="archive__item-title" itemprop="headline">{{ talk_title }}</h3>
 
-            {% if post.event %}
-              <p class="archive__item-talk-meta">{{ post.event }}</p>
-            {% endif %}
-
-            {% if post.venue %}
-              <p class="archive__item-talk-meta">{{ post.venue }}</p>
-            {% endif %}
-
-            {% if post.date %}
-              <p class="archive__item-talk-meta">{{ post.date }}</p>
-            {% endif %}
-
-            {% if post.location %}
-              <p class="archive__item-talk-meta">{{ post.location }}</p>
+            {% assign has_talk_meta = false %}
+            {% if post.paper_title and post.event %}{% assign has_talk_meta = true %}{% endif %}
+            {% if post.venue or post.date or post.location %}{% assign has_talk_meta = true %}{% endif %}
+            {% if has_talk_meta %}
+              <p class="archive__item-talk-meta">
+                {% assign needs_separator = false %}
+                {% if post.paper_title and post.event %}<span>{{ post.event }}</span>{% assign needs_separator = true %}{% endif %}
+                {% if post.venue %}{% if needs_separator %}<span class="archive__item-meta-separator" aria-hidden="true">·</span>{% endif %}<span>{{ post.venue }}</span>{% assign needs_separator = true %}{% endif %}
+                {% if post.date %}{% if needs_separator %}<span class="archive__item-meta-separator" aria-hidden="true">·</span>{% endif %}<span>{{ post.date }}</span>{% assign needs_separator = true %}{% endif %}
+                {% if post.location %}{% if needs_separator %}<span class="archive__item-meta-separator" aria-hidden="true">·</span>{% endif %}<span>{{ post.location }}</span>{% endif %}
+              </p>
             {% endif %}
 
             {% if post.excerpt %}
               <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
             {% endif %}
 
-            {% if post.slidesurl %}
+            {% if post.slidesurl or post.paperurl %}
               <p class="archive__item-resources">
-                <a href="{{ post.slidesurl }}">Slides</a>
+                {% assign needs_separator = false %}
+                {% if post.slidesurl %}<a href="{{ post.slidesurl }}">Slides</a>{% assign needs_separator = true %}{% endif %}
+                {% if post.paperurl %}{% if needs_separator %}<span class="archive__item-resource-separator" aria-hidden="true">·</span>{% endif %}<a href="{{ post.paperurl }}">Paper</a>{% endif %}
               </p>
             {% endif %}
           </article>

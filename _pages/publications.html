@@ -13,7 +13,10 @@ show_title: false
 {% for post in research_items %}
   <div class="list__item research-list__item">
     <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-      <h2 class="archive__item-title" itemprop="headline">{{ post.title }}</h2>
+      {% assign primary_url = post.websiteurl | default: post.paperurl %}
+      <h2 class="archive__item-title" itemprop="headline">
+        {% if primary_url %}<a class="archive__item-title-link" href="{{ primary_url }}" itemprop="url">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}
+      </h2>
 
       {% capture status_label %}
         {% if post.status == "Forthcoming" and post.venue %}
@@ -25,12 +28,12 @@ show_title: false
         {% endif %}
       {% endcapture %}
       {% assign status_label = status_label | strip %}
-      {% if status_label != "" %}
-        <p class="archive__item-status">{{ status_label }}</p>
-      {% endif %}
-
-      {% if post.coauthors %}
-        <p class="archive__item-coauthors">with <i>{% for coauthor in post.coauthors %}{% if coauthor.url %}<a href="{{ coauthor.url }}">{{ coauthor.name }}</a>{% else %}{{ coauthor.name }}{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</i></p>
+      {% if status_label != "" or post.coauthors %}
+        <p class="archive__item-meta">
+          {% if status_label != "" %}<span class="archive__item-status">{{ status_label }}</span>{% endif %}
+          {% if status_label != "" and post.coauthors %}<span class="archive__item-meta-separator" aria-hidden="true">·</span>{% endif %}
+          {% if post.coauthors %}<span class="archive__item-coauthors">with <i>{% for coauthor in post.coauthors %}{% if coauthor.url %}<a href="{{ coauthor.url }}">{{ coauthor.name }}</a>{% else %}{{ coauthor.name }}{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</i></span>{% endif %}
+        </p>
       {% endif %}
 
       {% assign summary_text = post.summary | default: post.excerpt %}
@@ -55,9 +58,9 @@ show_title: false
         <p class="archive__item-resources">
           {% assign needs_separator = false %}
           {% if post.websiteurl %}<a href="{{ post.websiteurl }}">Website</a>{% assign needs_separator = true %}{% endif %}
-          {% if post.paperurl %}{% if needs_separator %} | {% endif %}<a href="{{ post.paperurl }}">Paper</a>{% assign needs_separator = true %}{% endif %}
-          {% if post.dataurl %}{% if needs_separator %} | {% endif %}<a href="{{ post.dataurl }}">Dataset</a>{% assign needs_separator = true %}{% endif %}
-          {% if post.codeurl %}{% if needs_separator %} | {% endif %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
+          {% if post.paperurl %}{% if needs_separator %}<span class="archive__item-resource-separator" aria-hidden="true">·</span>{% endif %}<a href="{{ post.paperurl }}">Paper</a>{% assign needs_separator = true %}{% endif %}
+          {% if post.dataurl %}{% if needs_separator %}<span class="archive__item-resource-separator" aria-hidden="true">·</span>{% endif %}<a href="{{ post.dataurl }}">Dataset</a>{% assign needs_separator = true %}{% endif %}
+          {% if post.codeurl %}{% if needs_separator %}<span class="archive__item-resource-separator" aria-hidden="true">·</span>{% endif %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
         </p>
       {% endif %}
     </article>
