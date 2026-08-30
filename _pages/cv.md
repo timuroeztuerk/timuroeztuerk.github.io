@@ -11,7 +11,7 @@ redirect_from:
 
 <div style="width: 100%; max-width: 900px; height: 85vh; margin: 0 auto; border: 1px solid #ddd;">
   <iframe
-    src="https://www.dropbox.com/scl/fi/hjf47r5p0zcfeifgih8dc/CV-Dropbox.pdf?rlkey=i2aebpixah3ebjc1zr3uux8g2&raw=1"
+    src="https://www.dropbox.com/scl/fi/n57whn76qzpl4l22zl3a4/academic.pdf?rlkey=gt07ag06cpnwuo9ix42flhcaz&raw=1"
     width="100%"
     height="100%"
     style="border: 0;"
@@ -20,5 +20,5 @@ redirect_from:
 </div>
 
 <p style="margin-top: 1rem; text-align: center;">
-  <a href="https://www.dropbox.com/scl/fi/hjf47r5p0zcfeifgih8dc/CV-Dropbox.pdf?rlkey=i2aebpixah3ebjc1zr3uux8g2&dl=1">Download CV</a>
+  <a href="https://www.dropbox.com/scl/fi/n57whn76qzpl4l22zl3a4/academic.pdf?rlkey=gt07ag06cpnwuo9ix42flhcaz&dl=1">Download CV</a>
 </p>
