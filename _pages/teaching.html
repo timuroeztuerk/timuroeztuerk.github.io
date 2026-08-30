@@ -10,28 +10,24 @@ show_title: false
 
 {% assign teaching_items = site.data.teaching | sort: "sort_order" | reverse %}
 {% for post in teaching_items %}
-  <div class="list__item research-list__item teaching-list__item">
-    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-      <h2 class="archive__item-title" itemprop="headline">{{ post.title }}</h2>
+  <div class="list__item teaching-list__item">
+    <article class="archive__item" itemscope itemtype="https://schema.org/Course">
+      <h2 class="archive__item-title" itemprop="name">{{ post.title }}</h2>
 
-      {% if post.level %}
-        <p class="archive__item-teaching-meta">{{ post.level }}</p>
+      {% if post.level or post.software or post.terms %}
+        <p class="archive__item-teaching-meta">
+          {% assign needs_separator = false %}
+          {% if post.level %}<span>{{ post.level }}</span>{% assign needs_separator = true %}{% endif %}
+          {% if post.software %}{% if needs_separator %}<span class="archive__item-meta-separator" aria-hidden="true">·</span>{% endif %}<span>{{ post.software }}</span>{% assign needs_separator = true %}{% endif %}
+          {% if post.terms %}{% if needs_separator %}<span class="archive__item-meta-separator" aria-hidden="true">·</span>{% endif %}<span>{{ post.terms }}</span>{% endif %}
+        </p>
       {% endif %}
 
-      {% if post.format %}
-        <p class="archive__item-teaching-meta">{{ post.format }}</p>
-      {% endif %}
-
-      {% if post.terms %}
-        <p class="archive__item-teaching-meta">{{ post.terms }}</p>
-      {% endif %}
-
-      {% if post.codeurl or post.repositoryurl or post.slidesurl %}
+      {% if post.materialsurl or post.courseurl %}
         <p class="archive__item-resources">
           {% assign needs_separator = false %}
-          {% if post.codeurl %}<a href="{{ post.codeurl }}">Code</a>{% assign needs_separator = true %}{% endif %}
-          {% if post.repositoryurl %}{% if needs_separator %} | {% endif %}<a href="{{ post.repositoryurl }}">Repository</a>{% assign needs_separator = true %}{% endif %}
-          {% if post.slidesurl %}{% if needs_separator %} | {% endif %}<a href="{{ post.slidesurl }}">Slides</a>{% endif %}
+          {% if post.materialsurl %}<a href="{{ post.materialsurl }}">Course materials</a>{% assign needs_separator = true %}{% endif %}
+          {% if post.courseurl %}{% if needs_separator %}<span class="archive__item-resource-separator" aria-hidden="true">·</span>{% endif %}<a href="{{ post.courseurl }}">Course page</a>{% endif %}
         </p>
       {% endif %}
     </article>

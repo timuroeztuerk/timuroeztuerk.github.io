@@ -16,6 +16,13 @@
   }
 }
 
+@include breakpoint($large) {
+  #main > .page,
+  #main > .archive {
+    padding-top: 1.75rem;
+  }
+}
+
 .page {
   @include breakpoint($large) {
     @include span(10 of 12 last);
@@ -151,8 +158,8 @@
   }
 
   p {
-    text-align: justify;
-    hyphens: auto;
+    text-align: left;
+    hyphens: none;
   }
 }
 

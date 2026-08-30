@@ -55,7 +55,7 @@
   citation: "Braun, Sebastian T., and Timur Öztürk. 2026. \"From Weimar to West Germany: Confessional Cleavages, Party Fragmentation, and Far-Right Voting.\" Kiel Working Paper No. 2324. Kiel Institute for the World Economy."
   websiteurl: "https://www.kielinstitut.de/publications/from-weimar-to-west-germany-confessional-cleavages-party-fragmentation-and-far-right-voting-19909/"
   paperurl: "https://www.kielinstitut.de/fileadmin/Dateiverwaltung/IfW-Publications/fis-import/fd1ac0af-5181-4d4b-98db-4b1c39b98da7-KWP_2324.pdf"
-  dataurl: "https://github.com/timuroeztuerk/baden-württemberg"
+  dataurl: "https://timurozturk.de/baden-wuerttemberg"
   codeurl:
   summary: >-
     Using parish-level data for Baden and Württemberg, this paper studies how

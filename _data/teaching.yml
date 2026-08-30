@@ -1,71 +1,49 @@
 - title: "Economic History"
   type: "Course"
   venue: "Universität Bayreuth"
-  date_label: "Winter 2022, Winter 2023, Summer 2026"
   level: "BSc and MSc"
-  format: "Economic history"
+  software:
   terms: "Winter 2022, Winter 2023, Summer 2026"
-  codeurl:
-  repositoryurl:
-  slidesurl:
   sort_order: 10
 
 - title: "Practice for Advanced Econometrics"
   type: "Course"
   venue: "Universität Bayreuth"
-  date_label: "Summer 2021, Winter 2022, Winter 2023"
   level: "MSc"
-  format: "R"
+  software: "R"
   terms: "Summer 2021, Winter 2022, Winter 2023"
-  codeurl:
-  repositoryurl:
-  slidesurl:
   sort_order: 20
 
 - title: "Refresher in Mathematics and Statistics"
   type: "Course"
   venue: "Universität Bayreuth"
-  date_label: "Winter 2023, Winter 2024, Winter 2025"
   level: "MSc"
-  format: "R"
-  terms: "Winter 2023, Winter 2024, Winter 2025"
-  codeurl:
-  repositoryurl:
-  slidesurl:
+  software: "R"
+  terms: "Winter 2023–Winter 2025"
   sort_order: 30
 
 - title: "Quantitative Methods in Economic History"
   type: "Course"
   venue: "Universität Bayreuth"
-  date_label: "Summer 2026"
   level: "MSc"
-  format: "R"
+  software: "R"
   terms: "Summer 2026"
-  codeurl:
-  repositoryurl:
-  slidesurl:
   sort_order: 40
 
 - title: "Machine Learning and AI"
   type: "Course"
   venue: "Universität Bayreuth"
-  date_label: "Summer 2025, Winter 2025"
   level: "BSc and MSc"
-  format: "Python"
+  software: "Python"
   terms: "Summer 2025, Winter 2025"
-  codeurl:
-  repositoryurl: "https://elearning.uni-bayreuth.de/course/view.php?id=46010"
-  slidesurl:
+  courseurl: "https://elearning.uni-bayreuth.de/course/view.php?id=46010"
   sort_order: 50
 
 - title: "Data Science for Economic Historians"
   type: "Course"
   venue: "Universität Bayreuth"
-  date_label: "Summer 2023, Summer 2024, Summer 2025"
   level: "MSc"
-  format: "Python"
-  terms: "Summer 2023, Summer 2024, Summer 2025"
-  codeurl: "https://github.com/timuroeztuerk/data-science-lecture-S24"
-  repositoryurl: "https://github.com/timuroeztuerk/data-science-lecture-S24"
-  slidesurl: "https://github.com/timuroeztuerk/data-science-lecture-S24"
+  software: "Python"
+  terms: "Summer 2023–Summer 2025"
+  materialsurl: "https://github.com/timuroeztuerk/data-science-lecture-S24"
   sort_order: 60

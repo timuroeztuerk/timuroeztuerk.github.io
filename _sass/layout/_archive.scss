@@ -268,6 +268,46 @@ $archive-space-4: $archive-space-unit * 4;
   color: var(--global-text-color-light);
 }
 
+.teaching-list__item + .teaching-list__item {
+  margin-top: $archive-space-2;
+  padding-top: $archive-space-2;
+  border-top: 1px solid var(--global-border-color);
+}
+
+.teaching-list__item .archive__item-title {
+  margin: 0 0 0.35rem;
+  line-height: 1.28;
+}
+
+.teaching-list__item .archive__item-teaching-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin: 0;
+}
+
+.teaching-list__item .archive__item-meta-separator {
+  color: var(--global-border-color);
+}
+
+.teaching-list__item .archive__item > p.archive__item-resources {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-top: $archive-space-1;
+
+  a {
+    font-weight: 600;
+    text-underline-offset: 0.14em;
+  }
+}
+
+.teaching-list__item .archive__item-resource-separator {
+  color: var(--global-text-color-light);
+}
+
 .talks-year {
   margin-top: $archive-space-4;
   padding-top: $archive-space-2;
@@ -275,6 +315,8 @@ $archive-space-4: $archive-space-unit * 4;
 
   &:first-child {
     margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
   }
 
   @include breakpoint($medium) {
